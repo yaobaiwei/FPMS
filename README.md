@@ -1,4 +1,5 @@
 # Frequent Pattern Mining System Project
+
 ## User APIs
 ###1.Pattern&lt;Delta> class
  Users have to define their own pattern class inherit from the **Pattern&lt;Delta> class**, where Delta type is the minimum increment from a pattern to its supper pattern. For example, in FP-growth and Prefixspan algorithms, Delta can be regarded as items in each transactions.  
@@ -46,3 +47,6 @@ Master does the following job in every round:
 1. Keep waiting for slaves reporting the locally frequent patterns. Add new MasterNode or update the support vector according to the report message. If the pattern is confirmed globally infrequent, delete it and its subtree.  
 2. Update the record of the slowest progress of amoung all slaves, called min_frontier.  
 3. Scan the tree once according the DFS order, until meet the min_frontier point. Delete all confirmed leaf nodes and send request for those unconfirmed node.
+
+###Note
+I worked as a helper of Torby Lee for this system as his FYP.
